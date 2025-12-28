@@ -45,7 +45,7 @@ development_status:
 
   # Story 4: Polish & Deploy - blocked by Stories 1, 2, 3
   chop-4-polish-deploy:
-    status: drafted
+    status: review
     title: "Polish - Testing + Cleanup + Deployment"
     points: 3
     file: story-chop-redesign-4.md
@@ -53,10 +53,10 @@ development_status:
 
 # Sprint progress summary
 progress:
-  drafted: 1
+  drafted: 0
   ready_for_dev: 0
   in_progress: 0
-  review: 3
+  review: 4
   done: 0
   blocked: 0
   points_completed: 0

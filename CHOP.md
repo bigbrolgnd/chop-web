@@ -76,19 +76,37 @@ git push origin main                       # Push to GitHub
 /opt/docker-stack/chop-web/
 ├── src/
 │   ├── components/
-│   │   ├── CommunityEngagement.tsx   # Community section
-│   │   ├── Footer.tsx                # Site footer
-│   │   ├── Hero.tsx                  # Hero banner
-│   │   ├── MissionImpact.tsx         # Mission section
-│   │   ├── Navbar.tsx                # Navigation bar
-│   │   └── ValuesGrid.tsx            # Core values grid
+│   │   ├── layout/
+│   │   │   ├── LayoutShell.tsx       # Main layout wrapper
+│   │   │   ├── Navbar.tsx            # Header + navigation
+│   │   │   └── Footer.tsx            # Site footer
+│   │   ├── ui/
+│   │   │   ├── Logo.tsx              # Reusable logo
+│   │   │   └── AboutSection.tsx      # Reusable section wrapper
+│   │   ├── templates/
+│   │   │   ├── HomePage.tsx          # Home page template
+│   │   │   └── AboutPage.tsx         # About page template
+│   │   └── features/
+│   │       ├── Hero.tsx              # Hero banner
+│   │       ├── ServiceTimes.tsx      # Service schedule
+│   │       ├── WhoWeAre.tsx          # Mission section
+│   │       ├── FacebookFeed.tsx      # Facebook embed
+│   │       ├── QuickContact.tsx      # Contact section
+│   │       ├── ChurchHistory.tsx     # Church story
+│   │       ├── PastorBio.tsx         # Pastor bio
+│   │       ├── MissionVision.tsx     # Mission & vision
+│   │       └── Beliefs.tsx           # 7 Pillars
+│   ├── pages/
+│   │   ├── Home.tsx                  # Home route
+│   │   └── About.tsx                 # About route
 │   ├── __tests__/
-│   │   ├── App.test.tsx              # App component tests
-│   │   └── Navbar.test.tsx           # Navbar tests
-│   ├── App.tsx                       # Main app component
+│   │   ├── App.test.tsx              # App tests
+│   │   ├── layout/                   # Layout component tests
+│   │   ├── ui/                       # UI component tests
+│   │   └── features/                 # Feature component tests
+│   ├── App.tsx                       # Router + LayoutShell
 │   ├── main.tsx                      # Entry point
 │   ├── index.css                     # Global styles/Tailwind
-│   ├── types.ts                      # TypeScript types
 │   └── test-setup.ts                 # Vitest setup
 ├── public/
 │   └── favicon.svg                   # Site favicon
@@ -291,26 +309,43 @@ curl -I https://communityhouseofprayer.org
 
 ## Component Reference
 
-### Page Sections (top to bottom)
-1. **Navbar** - Fixed navigation with logo and menu items
-2. **Hero** - Full-width banner with gradient background
-3. **MissionImpact** - Mission statement and impact metrics
-4. **ValuesGrid** - Grid of core ministry values
-5. **CommunityEngagement** - Community involvement section
-6. **Footer** - Site footer with links and contact info
+### Routes
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | Home | Hero, Service Times, Who We Are, Facebook Feed, Contact |
+| `/about` | About | Church History, Pastor Bio, Mission/Vision, 7 Pillars |
+
+### Home Page Sections (top to bottom)
+1. **Hero** - Full-width banner with gradient, tagline, CTAs
+2. **ServiceTimes** - 3-column grid of service schedule
+3. **WhoWeAre** - Mission content with "Who We Serve" list
+4. **FacebookFeed** - Embedded Facebook Page Plugin
+5. **QuickContact** - Contact info + Partner CTA (blue background)
+
+### About Page Sections (top to bottom)
+1. **Hero Banner** - Blue header with "About Us" title
+2. **ChurchHistory** - Church story section
+3. **PastorBio** - Pastor Loretta Stevens bio
+4. **MissionVision** - Mission, vision, and who we serve
+5. **Beliefs** - 7 Pillars of faith + Get Involved CTA
+
+### Layout Components
+- **LayoutShell** - Wraps all pages with Navbar + Footer
+- **Navbar** - Centered branding header + sticky nav
+- **Footer** - Simplified copyright footer
 
 ### Adding New Components
 ```bash
-# Create component file
-touch src/components/NewComponent.tsx
+# Create feature component
+touch src/components/features/NewComponent.tsx
 
-# Add to App.tsx
-import NewComponent from './components/NewComponent'
+# Add to appropriate page template
+# src/components/templates/HomePage.tsx or AboutPage.tsx
 ```
 
 ### Color Palette (Tailwind)
-- Primary: `blue-600`, `blue-700`
-- Secondary: `amber-500`, `amber-600`
+- Primary Blue: `brand-blue` (#1e3a8a)
+- Accent Gold: `brand-gold` (#f59e0b)
 - Background: `gray-50`, `white`
 - Text: `gray-900`, `gray-600`
 
@@ -326,8 +361,10 @@ npm run test:coverage # Coverage report
 ```
 
 ### Test Files Location
-- `src/__tests__/App.test.tsx`
-- `src/__tests__/Navbar.test.tsx`
+- `src/__tests__/App.test.tsx` - Main app tests
+- `src/__tests__/layout/` - LayoutShell, Navbar, Footer tests
+- `src/__tests__/ui/` - AboutSection tests
+- `src/__tests__/features/` - HomePage, AboutPage tests
 
 ### Adding Tests
 ```typescript
@@ -424,4 +461,4 @@ docker compose ps
 
 ---
 
-*Last Updated: December 26, 2024*
+*Last Updated: December 28, 2024*
