@@ -1,0 +1,63 @@
+# Sprint Status - CHOP Website Redesign
+# Generated: 2025-12-28
+# Epic: CHOP-REDESIGN
+#
+# STATUS DEFINITIONS:
+#   drafted     - Story written but not yet approved for development
+#   ready-for-dev - Story approved and ready for implementation
+#   in-progress - Development actively underway
+#   review      - Implementation complete, awaiting code review
+#   done        - Story complete and verified
+#   blocked     - Cannot proceed due to dependency or issue
+
+sprint:
+  name: "CHOP Website Redesign Sprint 1"
+  start_date: 2025-12-28
+  epic: CHOP-REDESIGN
+  total_points: 16
+
+# Development status for each story
+# Order matters: stories are processed top-to-bottom
+development_status:
+  # Story 1: Foundation - no blockers, can start immediately
+  chop-1-foundation:
+    status: review
+    title: "Foundation - Atomic Structure + Routing"
+    points: 5
+    file: story-chop-redesign-1.md
+    blocked_by: []
+
+  # Story 2: Home Page - blocked by Story 1
+  chop-2-home-page:
+    status: drafted
+    title: "Home Page - Content Sections + Facebook Feed"
+    points: 5
+    file: story-chop-redesign-2.md
+    blocked_by: [chop-1-foundation]
+
+  # Story 3: About Page - blocked by Story 1
+  chop-3-about-page:
+    status: drafted
+    title: "About Page - Church Info + Beliefs"
+    points: 3
+    file: story-chop-redesign-3.md
+    blocked_by: [chop-1-foundation]
+
+  # Story 4: Polish & Deploy - blocked by Stories 1, 2, 3
+  chop-4-polish-deploy:
+    status: drafted
+    title: "Polish - Testing + Cleanup + Deployment"
+    points: 3
+    file: story-chop-redesign-4.md
+    blocked_by: [chop-1-foundation, chop-2-home-page, chop-3-about-page]
+
+# Sprint progress summary
+progress:
+  drafted: 3
+  ready_for_dev: 0
+  in_progress: 0
+  review: 1
+  done: 0
+  blocked: 0
+  points_completed: 0
+  points_remaining: 16

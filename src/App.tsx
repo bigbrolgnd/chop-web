@@ -1,22 +1,18 @@
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import MissionImpact from '@/components/MissionImpact';
-import ValuesGrid from '@/components/ValuesGrid';
-import CommunityEngagement from '@/components/CommunityEngagement';
-import Footer from '@/components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LayoutShell from '@/components/layout/LayoutShell';
+import Home from '@/pages/Home';
+import About from '@/pages/About';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <MissionImpact />
-        <ValuesGrid />
-        <CommunityEngagement />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <LayoutShell>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </LayoutShell>
+    </BrowserRouter>
   );
 }
 
