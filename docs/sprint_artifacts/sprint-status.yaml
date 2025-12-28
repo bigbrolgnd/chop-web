@@ -37,7 +37,7 @@ development_status:
 
   # Story 3: About Page - blocked by Story 1
   chop-3-about-page:
-    status: drafted
+    status: review
     title: "About Page - Church Info + Beliefs"
     points: 3
     file: story-chop-redesign-3.md
@@ -53,10 +53,10 @@ development_status:
 
 # Sprint progress summary
 progress:
-  drafted: 3
+  drafted: 2
   ready_for_dev: 0
   in_progress: 0
-  review: 1
+  review: 2
   done: 0
   blocked: 0
   points_completed: 0
