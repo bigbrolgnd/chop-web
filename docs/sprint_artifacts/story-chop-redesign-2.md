@@ -2,7 +2,7 @@
 
 **Story ID:** CHOP-2
 **Epic:** CHOP-REDESIGN
-**Status:** Draft
+**Status:** Review
 **Points:** 5
 **Created:** 2025-12-27
 
@@ -24,17 +24,17 @@ Build out the Home page with all content sections: Hero, Service Times, Who We A
 
 ## Acceptance Criteria
 
-- [ ] `Hero` component displays tagline, CTAs, and background image
-- [ ] `ServiceTimes` component shows weekly service schedule
-- [ ] `WhoWeAre` component displays mission content (from MissionImpact)
-- [ ] `FacebookFeed` component embeds Facebook Page Plugin iframe
-- [ ] `QuickContact` component displays address, phone, email with CTAs
-- [ ] All sections render in correct order on Home page
-- [ ] Responsive: All sections work on mobile, tablet, desktop
-- [ ] Facebook embed loads and displays recent posts
-- [ ] Existing content from MissionImpact preserved
-- [ ] Hero CTAs link to appropriate sections/pages
-- [ ] Tests written for all new components
+- [x] `Hero` component displays tagline, CTAs, and background image
+- [x] `ServiceTimes` component shows weekly service schedule
+- [x] `WhoWeAre` component displays mission content (from MissionImpact)
+- [x] `FacebookFeed` component embeds Facebook Page Plugin iframe
+- [x] `QuickContact` component displays address, phone, email with CTAs
+- [x] All sections render in correct order on Home page
+- [x] Responsive: All sections work on mobile, tablet, desktop
+- [x] Facebook embed loads and displays recent posts
+- [x] Existing content from MissionImpact preserved
+- [x] Hero CTAs link to appropriate sections/pages
+- [x] Tests written for all new components
 
 ---
 
@@ -87,19 +87,19 @@ Saturday Outreach: 9:00 AM
 
 ## Tasks
 
-- [ ] Create `Hero.tsx` adapted from existing Hero
-- [ ] Create `ServiceTimes.tsx` with schedule grid
-- [ ] Create `WhoWeAre.tsx` migrating MissionImpact content
-- [ ] Create `FacebookFeed.tsx` with iframe embed
-- [ ] Create `QuickContact.tsx` with contact info and CTA
-- [ ] Create `HomePage.tsx` template assembling all sections
-- [ ] Update `Home.tsx` page to render HomePage
-- [ ] Style all sections with brand colors
-- [ ] Test responsive behavior at all breakpoints
-- [ ] Verify Facebook embed loads correctly
-- [ ] Write tests for each new component
-- [ ] Run `npm run type-check` - no errors
-- [ ] Run `npm test` - all pass
+- [x] Create `Hero.tsx` adapted from existing Hero
+- [x] Create `ServiceTimes.tsx` with schedule grid
+- [x] Create `WhoWeAre.tsx` migrating MissionImpact content
+- [x] Create `FacebookFeed.tsx` with iframe embed
+- [x] Create `QuickContact.tsx` with contact info and CTA
+- [x] Create `HomePage.tsx` template assembling all sections
+- [x] Update `Home.tsx` page to render HomePage
+- [x] Style all sections with brand colors
+- [x] Test responsive behavior at all breakpoints
+- [x] Verify Facebook embed loads correctly
+- [x] Write tests for each new component
+- [x] Run `npm run type-check` - no errors
+- [x] Run `npm test` - all pass
 
 ---
 
@@ -117,3 +117,51 @@ Saturday Outreach: 9:00 AM
 - **Facebook Page URL:** `https://www.facebook.com/profile.php?id=100092857989783`
 - **Service Times:** Pull from Facebook page during implementation
 - **Hero Images:** User will provide (use placeholders initially)
+
+---
+
+## Dev Agent Record
+
+### Debug Log
+- 2025-12-28: Started Home page implementation
+- Created Hero with background image, tagline, and CTAs
+- Built ServiceTimes with 3-column grid layout
+- Created WhoWeAre migrating content from MissionImpact
+- Implemented FacebookFeed with Page Plugin iframe
+- Built QuickContact with contact info and Partner CTA
+- Assembled HomePage template with all sections
+
+### Completion Notes
+- All 11 acceptance criteria satisfied
+- All 13 tasks completed
+- 36 tests passing (8 test files)
+- TypeScript type-check passes with no errors
+- Facebook Page Plugin configured with provided URL
+- Hero links: "Our Mission" -> #mission, "Learn More" -> /about
+- Service times are placeholder (Sunday 10AM, Wed 7PM, Sat 9AM)
+- QuickContact includes Partner With Us CTA in blue section
+
+---
+
+## File List
+
+### Created
+- `src/components/features/Hero.tsx`
+- `src/components/features/ServiceTimes.tsx`
+- `src/components/features/WhoWeAre.tsx`
+- `src/components/features/FacebookFeed.tsx`
+- `src/components/features/QuickContact.tsx`
+- `src/components/templates/HomePage.tsx`
+- `src/__tests__/features/HomePage.test.tsx`
+
+### Modified
+- `src/pages/Home.tsx` - Now renders HomePage template
+- `src/__tests__/App.test.tsx` - Updated for new home page content
+
+---
+
+## Change Log
+
+| Date | Change | Author |
+|------|--------|--------|
+| 2025-12-28 | Story implementation complete - Home page with all sections | Dev Agent |

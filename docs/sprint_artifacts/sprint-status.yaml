@@ -29,7 +29,7 @@ development_status:
 
   # Story 2: Home Page - blocked by Story 1
   chop-2-home-page:
-    status: drafted
+    status: review
     title: "Home Page - Content Sections + Facebook Feed"
     points: 5
     file: story-chop-redesign-2.md
@@ -53,10 +53,10 @@ development_status:
 
 # Sprint progress summary
 progress:
-  drafted: 2
+  drafted: 1
   ready_for_dev: 0
   in_progress: 0
-  review: 2
+  review: 3
   done: 0
   blocked: 0
   points_completed: 0

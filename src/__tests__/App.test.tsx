@@ -19,8 +19,9 @@ describe('App', () => {
   it('renders the home page by default', () => {
     render(<App />);
 
-    // Check for the welcome heading on home page
-    expect(screen.getByText(/Welcome to Community House of Prayer/i)).toBeInTheDocument();
+    // Check for hero content on home page
+    expect(screen.getAllByText(/Commissioned by God/i).length).toBeGreaterThan(0);
+    expect(screen.getByText('Service Times')).toBeInTheDocument();
   });
 
   it('renders the navigation with correct links', () => {
