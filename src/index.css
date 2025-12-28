@@ -11,31 +11,47 @@
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased bg-white text-gray-800;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-3 bg-brand-gold hover:bg-yellow-500 text-black font-bold rounded-full transition-all shadow-lg hover:shadow-xl;
+    @apply px-8 py-3 bg-brand-gold hover:bg-amber-600 text-white font-semibold rounded-full transition-all shadow-md hover:shadow-lg;
   }
 
   .btn-secondary {
     @apply px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full backdrop-blur-sm border border-white/30 transition-all;
   }
 
+  .btn-outline {
+    @apply px-8 py-3 bg-transparent hover:bg-brand-charcoal text-brand-charcoal hover:text-white font-semibold rounded-full border-2 border-brand-charcoal transition-all;
+  }
+
   .section-heading {
     @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6;
   }
 
+  .section-subheading {
+    @apply text-sm uppercase font-semibold tracking-widest text-brand-charcoal mb-3;
+  }
+
   .card {
-    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-8 border border-gray-100;
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 border border-brand-silver;
+  }
+
+  .card-warm {
+    @apply bg-gradient-to-br from-white to-brand-silver/30 rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 border border-brand-silver/50;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-300;
+  }
+
+  .text-gradient-warm {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-400 to-brand-gold;
   }
 
   .marquee-container {
@@ -48,5 +64,25 @@
 
   .marquee-content:hover {
     animation-play-state: paused;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
   }
 }

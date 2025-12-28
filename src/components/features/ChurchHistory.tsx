@@ -3,8 +3,8 @@ import AboutSection from '@/components/ui/AboutSection';
 
 function ChurchHistory() {
   const imageElement = (
-    <div className="w-32 h-32 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
-      <Church className="w-16 h-16 text-brand-blue" />
+    <div className="w-32 h-32 mx-auto rounded-full bg-brand-charcoal/10 flex items-center justify-center">
+      <Church className="w-16 h-16 text-brand-charcoal" />
     </div>
   );
 

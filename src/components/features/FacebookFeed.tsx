@@ -17,19 +17,19 @@ function FacebookFeed({
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-sm uppercase font-semibold tracking-widest text-brand-blue mb-3">
+          <h3 className="section-subheading">
             Stay Connected
           </h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
             Latest Updates
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-gray-600 mx-auto">
+          <p className="mt-4 max-w-2xl text-lg text-brand-steel mx-auto">
             Follow us on Facebook for the latest news, events, and messages from Pastor Stevens.
           </p>
         </div>
 
         <div className="flex justify-center">
-          <div className="w-full max-w-[340px] bg-gray-50 rounded-xl overflow-hidden shadow-md">
+          <div className="w-full max-w-[340px] bg-brand-silver/30 rounded-2xl overflow-hidden shadow-md border border-brand-silver/50">
             <iframe
               src={iframeSrc}
               width={width}
@@ -50,7 +50,7 @@ function FacebookFeed({
             href={pageUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-brand-blue text-white font-semibold rounded-full hover:bg-blue-900 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-brand-charcoal text-white font-semibold rounded-full hover:bg-brand-charcoal-dark transition-colors"
           >
             Follow Us on Facebook
           </a>

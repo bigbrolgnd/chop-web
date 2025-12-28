@@ -40,30 +40,30 @@ function MissionVision() {
 
         <ul className="space-y-4 not-prose">
           <li className="flex items-start">
-            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
-              <Home className="h-5 w-5 text-brand-blue" />
+            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-brand-charcoal/10 flex items-center justify-center">
+              <Home className="h-5 w-5 text-brand-charcoal" />
             </div>
             <div className="ml-4">
               <h5 className="text-lg font-bold text-gray-900">The Homeless</h5>
-              <p className="text-gray-500">Providing dignity, resources, and spiritual support.</p>
+              <p className="text-brand-steel">Providing dignity, resources, and spiritual support.</p>
             </div>
           </li>
           <li className="flex items-start">
-            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
-              <Users className="h-5 w-5 text-brand-blue" />
+            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-brand-charcoal/10 flex items-center justify-center">
+              <Users className="h-5 w-5 text-brand-charcoal" />
             </div>
             <div className="ml-4">
               <h5 className="text-lg font-bold text-gray-900">Youth & Families</h5>
-              <p className="text-gray-500">Mentoring the next generation and strengthening family units.</p>
+              <p className="text-brand-steel">Mentoring the next generation and strengthening family units.</p>
             </div>
           </li>
           <li className="flex items-start">
-            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-50 flex items-center justify-center">
-              <HeartHandshake className="h-5 w-5 text-brand-blue" />
+            <div className="flex-shrink-0 h-10 w-10 rounded-full bg-brand-charcoal/10 flex items-center justify-center">
+              <HeartHandshake className="h-5 w-5 text-brand-charcoal" />
             </div>
             <div className="ml-4">
               <h5 className="text-lg font-bold text-gray-900">Seniors</h5>
-              <p className="text-gray-500">Ensuring our elders are honored, cared for, and connected.</p>
+              <p className="text-brand-steel">Ensuring our elders are honored, cared for, and connected.</p>
             </div>
           </li>
         </ul>

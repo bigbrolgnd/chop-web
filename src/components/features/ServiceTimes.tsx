@@ -37,13 +37,13 @@ function ServiceTimes() {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-sm uppercase font-semibold tracking-widest text-brand-blue mb-3">
+          <h3 className="section-subheading">
             Join Us
           </h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
             Service Times
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-gray-600 mx-auto">
+          <p className="mt-4 max-w-2xl text-lg text-brand-steel mx-auto">
             We gather throughout the week for worship, study, and service.
           </p>
         </div>
@@ -52,16 +52,16 @@ function ServiceTimes() {
           {services.map((service) => (
             <div
               key={service.name}
-              className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow border border-gray-100"
+              className="bg-gradient-to-br from-white to-brand-silver/20 rounded-2xl p-6 text-center hover:shadow-md transition-all border border-brand-silver/50 hover:border-brand-gold/30"
             >
-              <div className="w-14 h-14 mx-auto rounded-full bg-brand-blue/10 flex items-center justify-center mb-4">
-                <service.icon className="w-7 h-7 text-brand-blue" />
+              <div className="w-14 h-14 mx-auto rounded-full bg-brand-charcoal/10 flex items-center justify-center mb-4">
+                <service.icon className="w-7 h-7 text-brand-charcoal" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">{service.name}</h3>
               <p className="text-brand-gold font-semibold mb-2">
                 {service.day} • {service.time}
               </p>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <p className="text-brand-steel text-sm">{service.description}</p>
             </div>
           ))}
         </div>

@@ -17,7 +17,7 @@ function AboutSection({ title, heading, children, imageElement, className = '' }
         </div>
       )}
       <header className="px-6">
-        <h3 className="text-sm uppercase font-semibold tracking-widest text-brand-blue mb-3 text-center">
+        <h3 className="section-subheading text-center">
           {title}
         </h3>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight text-center">
@@ -25,7 +25,7 @@ function AboutSection({ title, heading, children, imageElement, className = '' }
         </h2>
       </header>
       <div className="px-6 mt-4">
-        <div className="prose prose-lg max-w-3xl mx-auto text-left text-gray-600">
+        <div className="prose prose-lg max-w-3xl mx-auto text-left text-brand-steel">
           {children}
         </div>
       </div>

@@ -7,10 +7,10 @@ function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <section className="bg-brand-blue py-16 text-white text-center">
+      <section className="bg-brand-charcoal py-16 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-silver max-w-2xl mx-auto">
             Learn about our mission, our pastor, and the values that guide everything we do.
           </p>
         </div>
@@ -23,7 +23,7 @@ function AboutPage() {
 
       {/* Divider */}
       <div className="max-w-3xl mx-auto px-6">
-        <hr className="border-gray-200" />
+        <hr className="border-brand-silver/50" />
       </div>
 
       {/* Pastor Bio Section */}
@@ -33,7 +33,7 @@ function AboutPage() {
 
       {/* Divider */}
       <div className="max-w-3xl mx-auto px-6">
-        <hr className="border-gray-200" />
+        <hr className="border-brand-silver/50" />
       </div>
 
       {/* Mission & Vision Section */}

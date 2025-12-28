@@ -3,49 +3,49 @@ import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] flex items-center justify-center bg-gray-900 overflow-hidden">
-      {/* Background Image */}
+    <section className="relative w-full h-[450px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      {/* Background with warm gradient */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1920"
           alt="Ministry team serving the community"
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+          className="w-full h-full object-cover"
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent" />
+        {/* Warm gradient overlay using brand colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-charcoal/90 via-brand-charcoal-dark/80 to-brand-charcoal/70" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-block mb-4 px-3 py-1 bg-brand-gold/20 border border-brand-gold/40 rounded-full">
-          <span className="text-brand-gold font-bold uppercase tracking-wider text-xs md:text-sm">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="inline-block mb-6 px-4 py-1.5 bg-brand-gold/20 border border-brand-gold/40 rounded-full">
+          <span className="text-brand-gold font-semibold uppercase tracking-widest text-xs">
             Going Beyond The Walls
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
-          Commissioned by God<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">
-            to Serve Our City
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6 leading-tight">
+          Reaching the Lost.<br />
+          <span className="text-brand-gold">
+            Healing the Hurting.
           </span>
         </h1>
 
-        <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
-          We are a ministry dedicated to restoring the{' '}
-          <span className="text-white font-semibold">mind, body, and soul</span> of
-          Fort Worth through faith, action, and boots-on-the-ground service.
+        <p className="max-w-2xl mx-auto text-base md:text-lg text-brand-silver leading-relaxed">
+          We are a community dedicated to restoring{' '}
+          <span className="text-white font-medium">mind, body, and soul</span> through
+          faith, action, and boots-on-the-ground service in Fort Worth.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#mission"
-            className="px-8 py-3 bg-brand-gold hover:bg-yellow-500 text-black font-bold rounded-full transition-all shadow-lg hover:shadow-xl flex items-center justify-center"
+            className="px-7 py-3 bg-brand-gold hover:bg-amber-600 text-white font-semibold rounded-full transition-all shadow-md hover:shadow-lg flex items-center justify-center"
           >
             Our Mission
             <ArrowRight className="ml-2 h-5 w-5" />
           </a>
           <Link
             to="/about"
-            className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full backdrop-blur-sm border border-white/30 transition-all flex items-center justify-center"
+            className="px-7 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full backdrop-blur-sm border border-brand-silver/30 transition-all flex items-center justify-center"
           >
             Learn More
           </Link>
