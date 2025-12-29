@@ -1,18 +1,36 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 function Navbar() {
-  const [logoLoaded, setLogoLoaded] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
   const [isTicker, setIsTicker] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
-    // Trigger logo animation after component mounts
-    const timer = setTimeout(() => setLogoLoaded(true), 100);
-    return () => clearTimeout(timer);
+    // Show scroll indicator after SVG animation completes (~3 seconds)
+    const indicatorTimer = setTimeout(() => {
+      setShowScrollIndicator(true);
+    }, 3000);
+
+    return () => {
+      clearTimeout(indicatorTimer);
+    };
+  }, []);
+
+  // Hide scroll indicator when user scrolls
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setShowScrollIndicator(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Check for overflow
@@ -70,34 +88,43 @@ function Navbar() {
   );
 
   return (
-    <header className="w-full bg-white z-50">
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 15s linear infinite;
-        }
-      `}</style>
+    <>
+      <header className="w-full bg-white">
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            animation: marquee 60s linear infinite;
+          }
+        `}</style>
 
-      {/* Main Header Area - Logo */}
-      <div className="py-6 md:py-8 border-b border-brand-silver/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center">
-            {/* Logo */}
-            <div className={`w-full max-w-[280px] md:max-w-2xl transition-all duration-700 ease-out ${logoLoaded
-              ? 'opacity-100 transform translate-y-0 scale-100'
-              : 'opacity-0 transform translate-y-4 scale-95'
-              }`}>
-              <Logo
-                linkClassName="block w-full"
-                className="w-full h-auto hover:scale-105 transition-transform duration-300 mx-auto"
-              />
+        {/* Main Header Area - Logo */}
+        <div className="py-6 md:py-8 border-b border-brand-silver/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col items-center text-center">
+              {/* Logo - SVG handles its own layer-by-layer animation */}
+              <div className="w-full max-w-[280px] md:max-w-2xl">
+                <Logo
+                  linkClassName="block w-full"
+                  className="w-full h-auto mx-auto"
+                />
+              </div>
+
+              {/* Scroll Down Indicator */}
+              <div
+                className={`mt-6 flex flex-col items-center text-brand-steel transition-all duration-500 ${
+                  showScrollIndicator ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                }`}
+              >
+                <span className="text-sm font-medium tracking-wide">Scroll Down</span>
+                <ChevronDown className="w-5 h-5 mt-1 animate-bounce" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Navigation Bar - Sticky */}
       <nav
@@ -139,7 +166,7 @@ function Navbar() {
           )}
         </div>
       </nav>
-    </header>
+    </>
   );
 }
 

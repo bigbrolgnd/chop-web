@@ -1,4 +1,3 @@
-import { User } from 'lucide-react';
 import AboutSection from '@/components/ui/AboutSection';
 
 function PastorBio() {
@@ -8,6 +7,8 @@ function PastorBio() {
         src="/images/pastor-stevens.jpg"
         alt="Pastor Loretta Stevens"
         className="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );

@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
+import { ReactNode } from 'react';
 import { describe, it, expect } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import HomePage from '@/components/templates/HomePage';
 
-const renderWithRouter = (component: React.ReactNode) => {
+const renderWithRouter = (component: ReactNode) => {
   return render(<BrowserRouter>{component}</BrowserRouter>);
 };
 
@@ -11,9 +12,9 @@ describe('HomePage', () => {
   it('renders the hero section', () => {
     renderWithRouter(<HomePage />);
 
-    // Text appears in multiple places (hero and navbar tagline)
-    expect(screen.getAllByText(/Commissioned by God/i).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/to Serve Our City/i).length).toBeGreaterThan(0);
+    // Check for updated hero text
+    expect(screen.getAllByText(/Reaching the Lost/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Healing the Hurting/i).length).toBeGreaterThan(0);
   });
 
   it('renders service times section', () => {
@@ -29,6 +30,7 @@ describe('HomePage', () => {
     renderWithRouter(<HomePage />);
 
     expect(screen.getByText('Who We Are')).toBeInTheDocument();
+    // These specific texts might be in WhoWeAre component details
     expect(screen.getByText('The Homeless')).toBeInTheDocument();
     expect(screen.getByText('Youth & Families')).toBeInTheDocument();
     expect(screen.getByText('Seniors')).toBeInTheDocument();
@@ -47,8 +49,10 @@ describe('HomePage', () => {
 
     expect(screen.getByText('Contact Us')).toBeInTheDocument();
     expect(screen.getByText('Location')).toBeInTheDocument();
-    expect(screen.getByText('Phone')).toBeInTheDocument();
+    // Phone removed from QuickContact
+    // expect(screen.getByText('Phone')).toBeInTheDocument();
     expect(screen.getByText('Email')).toBeInTheDocument();
+    expect(screen.getByText('Social')).toBeInTheDocument();
   });
 
   it('renders partner with us CTA', () => {

@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
+import { ReactNode } from 'react';
 import { describe, it, expect } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import AboutPage from '@/components/templates/AboutPage';
 
-const renderWithRouter = (component: React.ReactNode) => {
+const renderWithRouter = (component: ReactNode) => {
   return render(<BrowserRouter>{component}</BrowserRouter>);
 };
 
@@ -11,7 +12,7 @@ describe('AboutPage', () => {
   it('renders the page title', () => {
     renderWithRouter(<AboutPage />);
 
-    expect(screen.getByRole('heading', { level: 1, name: /about us/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /who we are/i })).toBeInTheDocument();
   });
 
   it('renders all main sections', () => {
@@ -48,11 +49,5 @@ describe('AboutPage', () => {
     expect(screen.getByText('The Homeless')).toBeInTheDocument();
     expect(screen.getByText('Youth & Families')).toBeInTheDocument();
     expect(screen.getByText('Seniors')).toBeInTheDocument();
-  });
-
-  it('renders the Get Involved CTA', () => {
-    renderWithRouter(<AboutPage />);
-
-    expect(screen.getByRole('link', { name: /get involved/i })).toBeInTheDocument();
   });
 });

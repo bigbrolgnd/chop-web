@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Heart, Facebook } from 'lucide-react';
+import { MapPin, Mail, Heart, Facebook } from 'lucide-react';
 
 function QuickContact() {
   return (

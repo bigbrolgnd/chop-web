@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
 interface LogoProps {
-  className?: string; // Classes for the image
-  linkClassName?: string; // Classes for the link wrapper
+  className?: string;
+  linkClassName?: string;
   to?: string;
   alt?: string;
 }
@@ -14,12 +14,17 @@ export default function Logo({
   alt = "Community House of Prayer"
 }: LogoProps) {
   return (
-    <Link to={to} className={linkClassName}>
-      <img
-        src="/logo.svg?v=13"
-        alt={alt}
-        className={className}
-      />
+    <Link to={to} className={linkClassName} aria-label={alt}>
+      <div className={className}>
+        <img 
+          src="/logo-animated.svg" 
+          alt={alt} 
+          className="w-full h-auto" 
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/logo.png";
+          }}
+        />
+      </div>
     </Link>
   );
 }

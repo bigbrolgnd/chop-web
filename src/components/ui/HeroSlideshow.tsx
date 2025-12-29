@@ -36,6 +36,8 @@ export default function HeroSlideshow({
                         src={img}
                         alt={`Slide ${index + 1}`}
                         className="w-full h-full object-cover"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        decoding="async"
                     />
                 </div>
             ))}
