@@ -3,8 +3,12 @@ import AboutSection from '@/components/ui/AboutSection';
 
 function PastorBio() {
   const imageElement = (
-    <div className="w-48 h-48 mx-auto rounded-full bg-gray-100 flex items-center justify-center border-4 border-brand-gold shadow-lg">
-      <User className="w-24 h-24 text-gray-400" />
+    <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-brand-gold shadow-lg">
+      <img
+        src="/images/pastor-stevens.jpg"
+        alt="Pastor Loretta Stevens"
+        className="w-full h-full object-cover"
+      />
     </div>
   );
 

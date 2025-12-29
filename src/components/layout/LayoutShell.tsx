@@ -13,7 +13,7 @@ function LayoutShell({ children }: LayoutShellProps) {
       <main className="flex-grow">
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

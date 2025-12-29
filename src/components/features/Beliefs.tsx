@@ -81,7 +81,9 @@ function Beliefs() {
             <h4 className="text-xl font-bold mb-2">Join the Movement</h4>
             <p className="text-brand-silver text-sm mb-4">Be a part of pillar #8: You.</p>
             <a
-              href="/#partner"
+              href="https://www.facebook.com/profile.php?id=100092857989783"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-gold text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors"
             >
               Get Involved

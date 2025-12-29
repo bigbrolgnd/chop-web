@@ -9,10 +9,18 @@ function AboutPage() {
       {/* Hero Banner */}
       <section className="bg-brand-charcoal py-16 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-brand-silver max-w-2xl mx-auto">
-            Learn about our mission, our pastor, and the values that guide everything we do.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">Who We Are</h1>
+          <div className="text-lg md:text-xl text-brand-silver max-w-4xl mx-auto space-y-6 leading-relaxed">
+            <p>
+              Community House of Prayer is a Christ-centered ministry dedicated to reaching the lost, restoring the broken, and strengthening the body of Christ through the power of prayer, worship, and compassionate outreach.
+            </p>
+            <p>
+              We are a church that cares for the whole individual — mind, body, and soul — ministering to people where they are and helping them become who God has called them to be.
+            </p>
+            <p>
+              Our ministry serves the homeless, youth, seniors, and families, bringing the love of Jesus to every corner of our community and beyond.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -27,7 +35,7 @@ function AboutPage() {
       </div>
 
       {/* Pastor Bio Section */}
-      <div className="bg-white">
+      <div id="pastor" className="bg-white">
         <PastorBio />
       </div>
 
@@ -37,12 +45,14 @@ function AboutPage() {
       </div>
 
       {/* Mission & Vision Section */}
-      <div className="bg-white">
+      <div id="mission" className="bg-white">
         <MissionVision />
       </div>
 
       {/* Beliefs Section (has its own background) */}
-      <Beliefs />
+      <div id="beliefs">
+        <Beliefs />
+      </div>
     </div>
   );
 }

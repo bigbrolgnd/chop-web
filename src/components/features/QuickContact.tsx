@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Heart } from 'lucide-react';
+import { MapPin, Phone, Mail, Heart, Facebook } from 'lucide-react';
 
 function QuickContact() {
   return (
@@ -30,14 +30,16 @@ function QuickContact() {
 
           <div className="text-center">
             <div className="w-14 h-14 mx-auto rounded-full bg-white/10 flex items-center justify-center mb-4">
-              <Phone className="w-7 h-7 text-brand-gold" />
+              <Facebook className="w-7 h-7 text-brand-gold" />
             </div>
-            <h3 className="text-lg font-bold mb-2">Phone</h3>
+            <h3 className="text-lg font-bold mb-2">Social</h3>
             <a
-              href="tel:+15551234567"
+              href="https://www.facebook.com/profile.php?id=100092857989783"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-brand-silver hover:text-white transition-colors"
             >
-              (555) 123-4567
+              Facebook Page
             </a>
           </div>
 
@@ -57,7 +59,9 @@ function QuickContact() {
 
         <div className="text-center" id="partner">
           <a
-            href="mailto:info@communityhouseofprayer.org?subject=Partnership%20Inquiry"
+            href="https://www.facebook.com/profile.php?id=100092857989783"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 bg-brand-gold text-white font-semibold rounded-full hover:bg-amber-600 transition-colors shadow-lg"
           >
             <Heart className="w-5 h-5 mr-2" fill="currentColor" />
